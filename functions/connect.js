@@ -25,7 +25,7 @@ module.exports = {
         .on('error', (err) => {
             reachable.set(hostname, true); //Sets the hostname to true for the heartbeat function
             connected.delete(hostname); //Deletes the Connected flag so the connect loop will try this device again
-            console.log(`Connection failed on : ${hostname} at `, new Date().toLocaleTimeString, err);
+            console.log(`Connection failed on : ${hostname} at `, new Date().toLocaleTimeString(), err);
         })
     }
 }

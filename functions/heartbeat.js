@@ -1,6 +1,6 @@
 module.exports = {
     name: 'heartbeat',
-    desc: 'Used to check if an SSH session is still active between the server and device',
+    desc: 'Used to ping each device before attempting the SSH connection',
     execute(hostname) {
         const ping = require('ping');
         const { reachable } = require('../maps/reachable');
